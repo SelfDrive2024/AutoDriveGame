@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class follow : MonoBehaviour
 {
-
     public GameObject Target;
     public GameObject T;
     public float speed = 1.5f;
     public Text buttonpressed;
-
-
 
     void FixedUpdate()
     {
@@ -37,8 +38,6 @@ public class follow : MonoBehaviour
         {
             buttonpressed.text = "D";
         }
- 
-
     }
 }
 
