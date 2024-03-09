@@ -21,6 +21,8 @@ public class fourtintersectioncontroller : MonoBehaviour
     public float redLightDuration = 5f;
 
     public TrafficLightPole[] trafficLightPoles; // Array to hold all traffic light poles
+    public GameObject[] signals; // Array of signals corresponding to each pole
+    public GameObject cubes;
 
     private int currentPoleIndex = 0; // Index of the current active traffic light pole
     private float timer = 0f; // Timer to track the duration of each light
@@ -35,8 +37,21 @@ public class fourtintersectioncontroller : MonoBehaviour
             bool isRed = !isGreen;
 
             SwitchLights(i, isGreen, false, isRed);
+
+            // Deactivate the signal for this pole
+            if (signals.Length > i && signals[i] != null)
+            {
+                signals[i].SetActive(false);
+            }
+        }
+
+        // Activate the signal for the initial green pole
+        if (signals.Length > currentPoleIndex && signals[currentPoleIndex] != null)
+        {
+            signals[currentPoleIndex].SetActive(true);
         }
     }
+
     private void Update()
     {
         // Update the timer
@@ -74,8 +89,37 @@ public class fourtintersectioncontroller : MonoBehaviour
 
         // Switch its lights to green immediately
         SwitchLights(currentPoleIndex, true, false, false);
+
+        // Deactivate all signals
+        DeactivateAllSignals();
+
+        // Activate the signal for the next pole
+        if (signals.Length > currentPoleIndex && signals[currentPoleIndex] != null)
+        {
+           // signals[currentPoleIndex].SetActive(true);
+            if(currentPoleIndex==0 || currentPoleIndex==2)
+            {
+                signals[0].SetActive(true);
+                signals[2].SetActive(true);
+            }
+            else
+            {
+                signals[1].SetActive(true);
+                signals[3].SetActive(true);
+            }
+        }
     }
 
+    private void DeactivateAllSignals()
+    {
+        foreach (GameObject signal in signals)
+        {
+            if (signal != null)
+            {
+                signal.SetActive(false);
+            }
+        }
+    }
 
     private void SwitchLights(int poleIndex, bool green, bool yellow, bool red)
     {

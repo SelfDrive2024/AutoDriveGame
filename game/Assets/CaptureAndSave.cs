@@ -11,7 +11,7 @@ public class CaptureAndSave : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("CapturePicture", 0f, 1f); 
+        InvokeRepeating("CapturePicture", 0f, .8f); 
     }
 
     void CapturePicture()
