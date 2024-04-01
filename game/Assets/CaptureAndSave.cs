@@ -6,12 +6,15 @@ public class CaptureAndSave : MonoBehaviour
     public Camera captureCamera; // Assign your camera in the inspector
     public string folderName = "CapturedPictures";
     public string fileNamePrefix = "Picture";
+    // Socket Communication
+    SocketCommunication socketCommunication;
 
     private int pictureIndex = 0;
 
     void Start()
     {
-        InvokeRepeating("CapturePicture", 0f, 5f); 
+        InvokeRepeating("CapturePicture", 0f, 2f);
+        socketCommunication = FindObjectOfType<SocketCommunication>();
     }
 
     void CapturePicture()
@@ -45,6 +48,7 @@ public class CaptureAndSave : MonoBehaviour
 
         // Encode texture into PNG
         byte[] bytes = tex.EncodeToPNG();
+        socketCommunication.SendAndReceiveData(true, System.Convert.ToBase64String(bytes));
         Destroy(tex);
 
         // Determine the file path

@@ -359,6 +359,7 @@
 "Assets/CaptureAndSave.cs"
 "Assets/follow.cs"
 "Assets/fourtintersectioncontroller.cs"
+"Assets/SocketCommunication.cs"
 "Assets/Unity-Speedometer-master/Speedometer.cs"
 -langversion:9.0
 

@@ -153,28 +153,18 @@ public class PrometeoCarController : MonoBehaviour
     float RRWextremumSlip;
 
     // Socket Communication
-    bool isRunning;
-    Thread pythonCommThread;
-    public string pythonCommIP = "127.0.0.1";
-    public int pythonCommPort = 25001;
-    TcpListener tcpListener;
-    TcpClient tcpClient;
-    string directionReceived;
+    SocketCommunication socketCommunication;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Socket Communication'
-
-        ThreadStart threadStart = new ThreadStart(GetCommInfo);
-        pythonCommThread = new Thread(threadStart);
-        pythonCommThread.Start();
-
         //In this part, we set the 'carRigidbody' value with the Rigidbody attached to this
         //gameObject. Also, we define the center of mass of the car with the Vector3 given
         //in the inspector.
         carRigidbody = gameObject.GetComponent<Rigidbody>();
         carRigidbody.centerOfMass = bodyMassCenter;
+
+        socketCommunication = FindObjectOfType<SocketCommunication>();
 
         //Initial setup to calculate the drift value of the car. This part could look a bit
         //complicated, but do not be afraid, the only thing we're doing here is to save the default
@@ -367,24 +357,24 @@ public class PrometeoCarController : MonoBehaviour
         else
         {
 
-            if (Input.GetKey(KeyCode.W) || directionReceived == "W")
+            if (Input.GetKey(KeyCode.W) || socketCommunication.directionReceived == "W")
             {
                 CancelInvoke("DecelerateCar");
                 deceleratingCar = false;
                 GoForward();
             }
-            if (Input.GetKey(KeyCode.S) || directionReceived == "S")
+            if (Input.GetKey(KeyCode.S) || socketCommunication.directionReceived == "S")
             {
                 CancelInvoke("DecelerateCar");
                 deceleratingCar = false;
                 GoReverse();
             }
 
-            if (Input.GetKey(KeyCode.A) || directionReceived == "A")
+            if (Input.GetKey(KeyCode.A) || socketCommunication.directionReceived == "A")
             {
                 TurnLeft();
             }
-            if (Input.GetKey(KeyCode.D) || directionReceived == "D")
+            if (Input.GetKey(KeyCode.D) || socketCommunication.directionReceived == "D")
             {
                 TurnRight();
             }
@@ -398,16 +388,16 @@ public class PrometeoCarController : MonoBehaviour
             {
                 RecoverTraction();
             }
-            if (((!Input.GetKey(KeyCode.S) && directionReceived != "S") && (!Input.GetKey(KeyCode.W) && directionReceived != "W")))
+            if (((!Input.GetKey(KeyCode.S) && socketCommunication.directionReceived != "S") && (!Input.GetKey(KeyCode.W) && socketCommunication.directionReceived != "W")))
             {
                 ThrottleOff();
             }
-            if (((!Input.GetKey(KeyCode.S) && directionReceived != "S") && (!Input.GetKey(KeyCode.W) && directionReceived != "W")) && !Input.GetKey(KeyCode.Space) && !deceleratingCar)
+            if (((!Input.GetKey(KeyCode.S) && socketCommunication.directionReceived != "S") && (!Input.GetKey(KeyCode.W) && socketCommunication.directionReceived != "W")) && !Input.GetKey(KeyCode.Space) && !deceleratingCar)
             {
                 InvokeRepeating("DecelerateCar", 0f, 0.1f);
                 deceleratingCar = true;
             }
-            if ((!Input.GetKey(KeyCode.A) && directionReceived != "A") && (!Input.GetKey(KeyCode.D) && directionReceived != "D") && steeringAxis != 0f)
+            if ((!Input.GetKey(KeyCode.A) && socketCommunication.directionReceived != "A") && (!Input.GetKey(KeyCode.D) && socketCommunication.directionReceived != "D") && steeringAxis != 0f)
             {
                 ResetSteeringAngle();
             }
@@ -418,43 +408,6 @@ public class PrometeoCarController : MonoBehaviour
         // We call the method AnimateWheelMeshes() in order to match the wheel collider movements with the 3D meshes of the wheels.
         AnimateWheelMeshes();
 
-    }
-
-    void SendAndReceiveData()
-    {
-        NetworkStream networkStream = tcpClient.GetStream();
-        byte[] buffer = new byte[tcpClient.ReceiveBufferSize];
-
-        // RECEIVING data from the Python process
-        int bytesRead = networkStream.Read(buffer, 0, tcpClient.ReceiveBufferSize); // getting data in bytes from Python
-        string dataReceived = Encoding.UTF8.GetString(buffer, 0, bytesRead); // converting data into string
-
-        if (dataReceived != null)
-        {
-            directionReceived = dataReceived;
-        }
-
-        //// SENDING data to Python process
-        //byte[] writeBuffer = Encoding.ASCII.GetBytes("DATA TO BE SENT"); // creating a write buffer
-        //networkStream.Write(writeBuffer, 0, writeBuffer.Length); // sending the byte array to Python
-    }
-
-    void GetCommInfo()
-    {
-        var localAddress = IPAddress.Parse(pythonCommIP);
-        tcpListener = new TcpListener(IPAddress.Any, pythonCommPort);
-
-        tcpListener.Start();
-        tcpClient = tcpListener.AcceptTcpClient();
-
-        isRunning = true;
-
-        while (isRunning)
-        {
-            SendAndReceiveData();
-        }
-
-        tcpListener.Stop();
     }
 
     // This method converts the car speed data from float to string, and then set the text of the UI carSpeedText with this value.
