@@ -10,8 +10,11 @@ public class follow : MonoBehaviour
     public GameObject T;
     public float speed = 1.5f;
     public Text buttonpressed;
-
-
+    public GameObject minimap_camera ;
+    Vector3 minimap_campos;
+    public Camera topDownCamera; // Assign your top-down camera here
+    public RawImage minimapImage; // Assign your minimap RawImage UI element here
+    public GameObject targetObject; // Assign your target object here
 
     void FixedUpdate()
     {
@@ -37,8 +40,17 @@ public class follow : MonoBehaviour
         {
             buttonpressed.text = "D";
         }
- 
 
+    }
+    public void onClickmini()
+    {
+        minimap_campos = minimap_camera.transform.position;
+        Time.timeScale = 0;
+    }
+    public void offClickmini()
+    {
+        minimap_camera.transform.position = minimap_campos;
+        Time.timeScale = 1;
     }
 }
 

@@ -363,6 +363,7 @@
 "Assets/BrokenVector/PROMETEO - Car Controller/Scripts/CameraFollow.cs"
 "Assets/BrokenVector/PROMETEO - Car Controller/Scripts/PrometeoCarController.cs"
 "Assets/BrokenVector/PROMETEO - Car Controller/Scripts/PrometeoTouchInput.cs"
+"Assets/CameraSwipeMovement.cs"
 "Assets/CaptureAndSave.cs"
 "Assets/follow.cs"
 "Assets/fourtintersectioncontroller.cs"
