@@ -15,7 +15,7 @@ C:/Users/shave/OneDrive/Documents/GitHub/AutoDriveGame/game
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-53518
+58853
 Successfully changed project path to: C:/Users/shave/OneDrive/Documents/GitHub/AutoDriveGame/game
 C:/Users/shave/OneDrive/Documents/GitHub/AutoDriveGame/game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/shave/OneDrive/Documents/GitHub/AutoDriveGame/game
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [23324] Host "[IP] 10.0.0.87 [Port] 0 [Flags] 2 [Guid] 437232709 [EditorId] 437232709 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-RH6NNEKI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [10360] Host "[IP] 10.0.0.87 [Port] 0 [Flags] 2 [Guid] 3350065613 [EditorId] 3350065613 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-RH6NNEKI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [23324] Host "[IP] 10.0.0.87 [Port] 0 [Flags] 2 [Guid] 437232709 [EditorId] 437232709 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-RH6NNEKI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [10360] Host "[IP] 10.0.0.87 [Port] 0 [Flags] 2 [Guid] 3350065613 [EditorId] 3350065613 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-RH6NNEKI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
-Refreshing native plugins compatible for Editor in 93.87 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 23.51 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.18f1 (d29bea25151d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -71,49 +71,49 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56588
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56164
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.015022 seconds.
-- Loaded All Assemblies, in  2.021 seconds
+Registered in 0.022683 seconds.
+- Loaded All Assemblies, in  1.386 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 629 ms
+Android Extension - Scanning For ADB Devices 690 ms
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.226 seconds
-Domain Reload Profiling: 3246ms
-	BeginReloadAssembly (476ms)
+- Finished resetting the current domain, in  1.663 seconds
+Domain Reload Profiling: 3046ms
+	BeginReloadAssembly (459ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (218ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (105ms)
-	LoadAllAssembliesAndSetupDomain (1204ms)
-		LoadAssemblies (480ms)
+		CreateAndSetChildDomain (2ms)
+	RebuildCommonClasses (130ms)
+	RebuildNativeTypeToScriptingClass (41ms)
+	initialDomainReloadingComplete (193ms)
+	LoadAllAssembliesAndSetupDomain (558ms)
+		LoadAssemblies (456ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (1193ms)
-			TypeCache.Refresh (1189ms)
-				TypeCache.ScanAssembly (858ms)
+		AnalyzeDomain (552ms)
+			TypeCache.Refresh (548ms)
+				TypeCache.ScanAssembly (511ms)
 			ScanForSourceGeneratedMonoScriptInfo (1ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (1227ms)
+	FinalizeReload (1665ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1130ms)
+		SetupLoadedEditorAssemblies (1492ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (846ms)
-			SetLoadedEditorAssemblies (6ms)
+			InitializePlatformSupportModulesInManaged (1046ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (5ms)
-			ProcessInitializeOnLoadAttributes (200ms)
-			ProcessInitializeOnLoadMethodAttributes (72ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (309ms)
+			ProcessInitializeOnLoadMethodAttributes (125ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -121,10 +121,8 @@ Domain Reload Profiling: 3246ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Symbol file data-000001415D545650 doesn't match image C:\Users\shave\OneDrive\Documents\GitHub\AutoDriveGame\game\Library\ScriptAssemblies\Assembly-CSharp.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  3.013 seconds
-Refreshing native plugins compatible for Editor in 4.59 ms, found 3 plugins.
+- Loaded All Assemblies, in  2.167 seconds
+Refreshing native plugins compatible for Editor in 10.65 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
@@ -133,48 +131,48 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.161 seconds
-Domain Reload Profiling: 4172ms
-	BeginReloadAssembly (310ms)
+- Finished resetting the current domain, in  2.236 seconds
+Domain Reload Profiling: 4401ms
+	BeginReloadAssembly (465ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (12ms)
+		DisableScriptedObjects (18ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (30ms)
-	RebuildCommonClasses (77ms)
-	RebuildNativeTypeToScriptingClass (24ms)
-	initialDomainReloadingComplete (60ms)
-	LoadAllAssembliesAndSetupDomain (2539ms)
-		LoadAssemblies (2251ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (107ms)
+	RebuildNativeTypeToScriptingClass (34ms)
+	initialDomainReloadingComplete (113ms)
+	LoadAllAssembliesAndSetupDomain (1444ms)
+		LoadAssemblies (932ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (486ms)
-			TypeCache.Refresh (445ms)
-				TypeCache.ScanAssembly (362ms)
-			ScanForSourceGeneratedMonoScriptInfo (30ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (1162ms)
+		AnalyzeDomain (825ms)
+			TypeCache.Refresh (743ms)
+				TypeCache.ScanAssembly (686ms)
+			ScanForSourceGeneratedMonoScriptInfo (62ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (2238ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (782ms)
+		SetupLoadedEditorAssemblies (1577ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (48ms)
-			SetLoadedEditorAssemblies (7ms)
+			InitializePlatformSupportModulesInManaged (93ms)
+			SetLoadedEditorAssemblies (13ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (112ms)
-			ProcessInitializeOnLoadAttributes (566ms)
-			ProcessInitializeOnLoadMethodAttributes (38ms)
-			AfterProcessingInitializeOnLoad (9ms)
-			EditorAssembliesLoaded (0ms)
+			BeforeProcessingInitializeOnLoad (225ms)
+			ProcessInitializeOnLoadAttributes (1130ms)
+			ProcessInitializeOnLoadMethodAttributes (89ms)
+			AfterProcessingInitializeOnLoad (26ms)
+			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (19ms)
+		AwakeInstancesAfterBackupRestoration (33ms)
 Shader 'Custom/RainShader': fallback shader 'Particles/Alpha Blended' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 6.49 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
+Refreshing native plugins compatible for Editor in 14.53 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3149 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 32 unused Assets / (57.0 KB). Loaded Objects now: 3634.
-Memory consumption went from 139.8 MB to 139.7 MB.
-Total: 7.566000 ms (FindLiveObjects: 0.547400 ms CreateObjectMapping: 0.253000 ms MarkObjects: 6.587800 ms  DeleteObjects: 0.175700 ms)
+Unloading 3163 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (57.1 KB). Loaded Objects now: 3651.
+Memory consumption went from 144.2 MB to 144.1 MB.
+Total: 9.987700 ms (FindLiveObjects: 0.754300 ms CreateObjectMapping: 0.589800 ms MarkObjects: 8.374200 ms  DeleteObjects: 0.266500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -190,62 +188,6 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 164750.235297 seconds.
-  path: Assets/BrokenVector/Tarbo-CITY-TrafficLights/Textures/emit.png
-  artifactKey: Guid(86b18d9b4ae36a9429307ac5ad15310a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BrokenVector/Tarbo-CITY-TrafficLights/Textures/emit.png using Guid(86b18d9b4ae36a9429307ac5ad15310a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '816d2a0c6d3e88e4cfe4b584beb1f34f') in 0.123746 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/pedo/LocomotionPack2/Remy.fbm/Remy_Bottom_Gloss.png
-  artifactKey: Guid(db786e06d485f1942b3766426848c9c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/pedo/LocomotionPack2/Remy.fbm/Remy_Bottom_Gloss.png using Guid(db786e06d485f1942b3766426848c9c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '063b86879936070e6b6c1fe3b059e3c5') in 0.036205 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/pedo/LocomotionPack2/Remy.fbm/Remy_Bottom_Diffuse.png
-  artifactKey: Guid(ced3c83e37835bc4386c3e3005c86b44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/pedo/LocomotionPack2/Remy.fbm/Remy_Bottom_Diffuse.png using Guid(ced3c83e37835bc4386c3e3005c86b44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caffa38ddb45242ee6a92d73a12a4d54') in 0.036060 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/pedo/Locomotion Pack (3)/Sporty Granny.fbm/FitnessGrandma_FaceAnimMap.png
-  artifactKey: Guid(0396bbe2b2888a14982175867d51571c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/pedo/Locomotion Pack (3)/Sporty Granny.fbm/FitnessGrandma_FaceAnimMap.png using Guid(0396bbe2b2888a14982175867d51571c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4652c563a909acb0f22a4033e7355541') in 0.055846 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/pedo/LocomotionPack2/Remy.fbm/Remy_Bottom_Normal.png
-  artifactKey: Guid(d3fc92182f1b72e43aef0def763e1b3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/pedo/LocomotionPack2/Remy.fbm/Remy_Bottom_Normal.png using Guid(d3fc92182f1b72e43aef0def763e1b3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '778e327dc9d8c1598a13e908eb860a87') in 0.057153 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000047 seconds.
-  path: Assets/RainMaker/Demo/NatureLandscape.png
-  artifactKey: Guid(250ee5d919a222c499e5d9e2177fd609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RainMaker/Demo/NatureLandscape.png using Guid(250ee5d919a222c499e5d9e2177fd609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df204d1ba73c8d384d6a5074a70e086c') in 0.085918 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/pedo/LocomotionPack2/Remy.fbm/Remy_Body_Opacity.png
-  artifactKey: Guid(26ae41e16c9d46942976b1d901a5d326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/pedo/LocomotionPack2/Remy.fbm/Remy_Body_Opacity.png using Guid(26ae41e16c9d46942976b1d901a5d326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36dd7add99bb3a60864e76786de6630e') in 0.034909 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
 AssetImportWorker is now disconnected from the server
