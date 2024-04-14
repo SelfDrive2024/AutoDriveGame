@@ -12,10 +12,6 @@ public class trigger : MonoBehaviour
     {
         rectTransform = GetComponent<RectTransform>();
 
-        if (minimapCamera == null)
-        {
-            Debug.LogError("Minimap Camera is not assigned in the inspector!");
-        }
     }
 
     public void ClickOnMinimap()
