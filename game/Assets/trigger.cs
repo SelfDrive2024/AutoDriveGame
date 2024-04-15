@@ -27,7 +27,7 @@ public class trigger : MonoBehaviour
         Vector3 targetPosition = minimapCamera.ViewportToWorldPoint(new Vector3(normalizedPoint.x, normalizedPoint.y, minimapCamera.nearClipPlane));
 
         // Set the Y position of the cube to be at the ground level (Y = 0)
-        targetPosition.y = 20;
+        targetPosition.y = 0;
 
         // Set the position of the cube without instantiating it
         cubePrefab.transform.position = targetPosition;

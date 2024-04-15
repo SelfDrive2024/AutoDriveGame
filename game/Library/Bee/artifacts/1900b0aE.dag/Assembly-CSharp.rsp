@@ -359,12 +359,14 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+"Assets/AicarController.cs"
 "Assets/BrokenVector/LowPolyWater_Pack/Scripts/LowPolyWater.cs"
 "Assets/BrokenVector/PROMETEO - Car Controller/Scripts/CameraFollow.cs"
 "Assets/BrokenVector/PROMETEO - Car Controller/Scripts/PrometeoCarController.cs"
 "Assets/BrokenVector/PROMETEO - Car Controller/Scripts/PrometeoTouchInput.cs"
 "Assets/CameraSwipeMovement.cs"
 "Assets/CaptureAndSave.cs"
+"Assets/CarController.cs"
 "Assets/follow.cs"
 "Assets/fourtintersectioncontroller.cs"
 "Assets/pedestrian.cs"
@@ -378,6 +380,8 @@
 "Assets/RainMaker/Prefab/RainScript2D.cs"
 "Assets/trigger.cs"
 "Assets/Unity-Speedometer-master/Speedometer.cs"
+"Assets/waypointContaier.cs"
+"Assets/WaypointManager.cs"
 -langversion:9.0
 
 /deterministic
