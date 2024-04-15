@@ -7,7 +7,7 @@ public class AiCarController : MonoBehaviour
 {
     public GameObject target;
     public NavMeshAgent agent;
-    private float raycastDistance = 30f;
+    private float raycastDistance = 70f;
     private bool isHittingRedLight = false;
     private float resumeDelay = 2f;
 
@@ -36,6 +36,8 @@ public class AiCarController : MonoBehaviour
                 {
                     isHittingRedLight = true;
                     agent.isStopped = true;
+                    agent.speed = 0f; // Ensure agent stops immediately
+                    Debug.Log("Agent stopped");
                 }
             }
         }
@@ -58,5 +60,7 @@ public class AiCarController : MonoBehaviour
     void ResumeMovement()
     {
         agent.isStopped = false;
+        agent.speed = 20f; // Set agent speed back to normal or desired speed
+        Debug.Log("Agent resumed movement");
     }
 }

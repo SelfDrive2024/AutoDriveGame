@@ -22,7 +22,6 @@ public class fourtintersectioncontroller : MonoBehaviour
 
     public TrafficLightPole[] trafficLightPoles; // Array to hold all traffic light poles
     public GameObject[] signals; // Array of signals corresponding to each pole
-    public GameObject cubes;
 
     private int currentPoleIndex = 0; // Index of the current active traffic light pole
     private float timer = 0f; // Timer to track the duration of each light
@@ -93,22 +92,24 @@ public class fourtintersectioncontroller : MonoBehaviour
         // Deactivate all signals
         DeactivateAllSignals();
 
-        // Activate the signal for the next pole
-        if (signals.Length > currentPoleIndex && signals[currentPoleIndex] != null)
+        // Find the pole that is currently showing the red light
+        int redLightPoleIndex = -1;
+        for (int i = 0; i < trafficLightPoles.Length; i++)
         {
-           // signals[currentPoleIndex].SetActive(true);
-            if(currentPoleIndex==0 || currentPoleIndex==2)
+            if (trafficLightPoles[i].isRed)
             {
-                signals[0].SetActive(true);
-                signals[2].SetActive(true);
-            }
-            else
-            {
-                signals[1].SetActive(true);
-                signals[3].SetActive(true);
+                redLightPoleIndex = i;
+                break;
             }
         }
+
+        // Activate the signal for the pole that is currently showing the red light
+        if (redLightPoleIndex != -1 && signals.Length > redLightPoleIndex && signals[redLightPoleIndex] != null)
+        {
+            signals[redLightPoleIndex].SetActive(true);
+        }
     }
+
 
     private void DeactivateAllSignals()
     {
